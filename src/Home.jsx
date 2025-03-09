@@ -1,14 +1,18 @@
 import libraryImage from './assets/library.jpg';
 import iPadImage from './assets/Ipad.png';
 import { Button } from './components/Button';
-
+import Marquee from './components/Marquee';
+import { DownloadSection } from "./components/DownloadSection";
 export const Home = () => {
     return <>
-        <div className="w-full h-[700px] bg-cover bg-center" style={{ backgroundImage: `url(${libraryImage})` }}>
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4">
-                <h1 className="text-4xl font-bold">EhViewer App [Official Download]</h1>
-                <p className="text-lg mt-2">Discover manga like never before</p>
-                <Button buttonText={"Download Now"} />
+        <div className="w-full h-[700px] bg-cover " style={{ backgroundImage: `url(${libraryImage})` }}>
+            <div className="flex justify-center items-center content-center  text-white h-full">
+                <div>
+                <p className="text-center text-6xl font-bold">EhViewer App [Official Download]</p>
+                <p className='my-12 text-2xl font-semibold'>Read and manage online Comics within the blink of an eyes</p>
+                <a href="#download" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">Download</a>
+                
+                </div>
             </div>
         </div>
         <div className='flex justify-between items-center p-4'>
@@ -16,8 +20,8 @@ export const Home = () => {
 
             </div>
             <div className='w-[400px]'>
-                <h1>What is EhViewer?</h1>
-                <p>EhViewer is a mobile application available for Android and iOS, designed for anime comic enthusiasts. It offers a feature-rich platform to enhance your online manga reading experience.
+                <h1 className='text-2xl font-bold'>What is EhViewer?</h1>
+                <p className='text-justify'>EhViewer is a mobile application available for Android and iOS, designed for anime comic enthusiasts. It offers a feature-rich platform to enhance your online manga reading experience.
 
                     With its intuitive interface, you can effortlessly organize and read your favorite manga on your smartphone without any hassle.
 
@@ -33,18 +37,19 @@ export const Home = () => {
         <div className="bg-blue-50 py-12">
             <div className="max-w-6xl mx-auto text-center">
                 <h2 className="text-3xl font-bold text-blue-900">Features</h2>
-                <p className="text-gray-600 mt-2">What unique features does Ehviewer app offer?</p>
+                <p className="text-gray-600 my-6">What unique features does Ehviewer app offer?</p>
             </div>
 
-            <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto px-4">
+            <Marquee/>
+            {/* <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto px-4">
                 {featuresData.map((feature, index) => (
-                    <div key={index} className="bg-white shadow-lg rounded-lg p-6">
-                        <h3 className="text-lg font-semibold text-blue-900">{feature.title}</h3>
-                        <p className="text-gray-600 mt-2">{feature.description}</p>
-                    </div>
+                    
                 ))}
-            </div>
+            </div> */}
         </div>
+        <div id="download" className="mt-12">
+                <DownloadSection />
+            </div>
         <div className="flex justify-center items-center py-12">
             <div className="w-full max-w-4xl bg-gradient-to-b from-blue-700 to-gray-900 text-white text-center p-8 rounded-lg shadow-lg">
                 <h2 className="text-2xl font-bold">Join the Manga Revolution</h2>

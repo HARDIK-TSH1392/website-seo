@@ -6,18 +6,20 @@ import { Home } from "./Home";
 import { ContactPage } from "./ContactPage";
 import { AboutPage } from "./About";
 import { FAQsPage } from "./FAQsPage";
-
+import RootLayout from "./Layout";
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
+      
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-        <Route path="/faq" element={<FAQsPage />} />
+        <Route element={<RootLayout/>}>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/faq" element={<FAQsPage />} />
+        </Route>
       </Routes>
-      <Footer />
+      
     </BrowserRouter>
   );
 }

@@ -12,22 +12,24 @@ export const ContactPage = () => {
             </div>
 
             {/* Contact Section */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div className="">
                 {/* Left Side - Contact Info */}
-                <div>
+                <div className=" mt-4">
                     <h2 className="text-2xl font-semibold text-gray-900">Get in Touch with Ehviewer</h2>
-                    <hr className="my-4 border-gray-300" />
-                    
-                    <div className="mt-6">
+                    <hr className=" border-gray-300" />
+                    <div className="flex justify-evenly mt-6">
+                    <div className="p-8 border-[1px] shadow-sm rounded-lg">
                         <h3 className="font-semibold text-gray-800">Address</h3>
                         <p className="text-gray-600">2360 Hood Avenue, San Diego, CA, 92123</p>
                     </div>
 
-                    <div className="mt-4">
+                    <div className=" p-8 border-[1px] shadow-sm rounded-lg">
                         <h3 className="font-semibold text-gray-800">Email</h3>
                         <p className="text-gray-600">support@ehviewer.info</p>
                         <p className="text-gray-600">For Advertisement: info@digiboost.org</p>
                     </div>
+                    </div>
+                    
 
                     {/* Social Media Icons */}
                     <div className="mt-6 flex space-x-4 text-gray-700">
@@ -43,20 +45,20 @@ export const ContactPage = () => {
                 <div>
                     <h2 className="text-2xl font-semibold text-gray-900 mb-4">Send Us a Message</h2>
 
-                    <form className="bg-white p-6 shadow-md rounded-lg">
+                    <form className="bg-white p-6 shadow-md rounded-lg md:w-3/4 mx-auto ">
                         <div className="mb-4">
-                            <label className="block text-gray-700 font-medium">Full Name <span className="text-red-500">*</span></label>
-                            <input type="text" className="w-full mt-2 px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-400 focus:outline-none" required />
+                            
+                            <input type="text" className="w-full mt-2 px-4 py-2 border-b border-gray-500 rounded-md focus:ring-2 focus:ring-blue-400 focus:outline-none" placeholder="Full Name" required />
                         </div>
 
                         <div className="mb-4">
-                            <label className="block text-gray-700 font-medium">Email <span className="text-red-500">*</span></label>
-                            <input type="email" className="w-full mt-2 px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-400 focus:outline-none" required />
+                            
+                            <input type="email" className="w-full mt-2 px-4 py-2 border-b border-gray-500 rounded-md focus:ring-2 focus:ring-blue-400 focus:outline-none" placeholder="Email" required />
                         </div>
 
                         <div className="mb-4">
-                            <label className="block text-gray-700 font-medium">Message <span className="text-red-500">*</span></label>
-                            <textarea className="w-full mt-2 px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-400 focus:outline-none h-32" required></textarea>
+                            
+                            <textarea className="w-full mt-2 px-4 py-2 border-b border-gray-500 rounded-md focus:ring-2 focus:ring-blue-400 focus:outline-none h-32" placeholder="Message" required></textarea>
                         </div>
 
                         <button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-md transition duration-300">

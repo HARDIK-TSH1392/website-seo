@@ -1,3 +1,4 @@
+import logo from './assets/logo.png'
 export const AboutPage = () => {
     return (
         <div className="max-w-7xl mx-auto px-6 py-12">
@@ -8,21 +9,21 @@ export const AboutPage = () => {
             <div className="mt-10 flex flex-col md:flex-row items-center gap-10">
                 {/* Left Section - Image */}
                 <div className="w-full md:w-1/2">
-                    <img src="/about-image.png" alt="Ehviewer App" className="w-full rounded-lg shadow-md" />
+                    <img src={logo} alt="Ehviewer App" className="w-full rounded-lg shadow-md" />
                 </div>
 
                 {/* Right Section - Text Content */}
                 <div className="w-full md:w-1/2">
-                    <p className="text-gray-700">
+                    <p className="text-gray-700 text-justify">
                         The Ehviewer app is dedicated to offering a seamless and enjoyable manga comic reading experience for manga 
                         enthusiasts worldwide. Our user-friendly interface sets us apart in the industry.
                     </p>
-                    <p className="text-gray-700 mt-4">
+                    <p className="text-gray-700 mt-4 text-justify">
                         <a href="#" className="text-blue-600 font-medium hover:underline">Ehviewer</a> was founded with a vision to 
                         elevate the way manga comics are consumed digitally. Our journey began with a passion for enhancing the online 
                         comic reading experience.
                     </p>
-                    <p className="text-gray-700 mt-4">
+                    <p className="text-gray-700 mt-4 text-justify">
                         Ehviewer has had the privilege of serving a diverse range of clients, from individual manga fans to avid comic 
                         readers looking for a convenient mobile solution and free manga viewer app.
                     </p>
